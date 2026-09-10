@@ -1,0 +1,29 @@
+{
+  "name": "ecommerce-playwright-framework",
+  "version": "1.0.0",
+  "description": "End-to-end test automation framework for an e-commerce web application using Playwright with TypeScript and the Page Object Model.",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:login": "playwright test tests/login.spec.ts",
+    "test:cart": "playwright test tests/cart.spec.ts",
+    "test:checkout": "playwright test tests/checkout.spec.ts"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "e-commerce",
+    "page-object-model",
+    "qa-automation"
+  ],
+  "author": "Vuluvala Pavasubralalireddy",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "validUser": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "lockedOutUser": {
+    "username": "locked_out_user",
+    "password": "secret_sauce"
+  },
+  "invalidLogins": [
+    { "username": "standard_user", "password": "wrong_password" },
+    { "username": "", "password": "" },
+    { "username": "", "password": "secret_sauce" }
+  ],
+  "shippingInfo": {
+    "valid": { "firstName": "Pavan", "lastName": "Reddy", "postalCode": "500001" },
+    "missingFirstName": { "firstName": "", "lastName": "Reddy", "postalCode": "500001" },
+    "missingPostalCode": { "firstName": "Pavan", "lastName": "Reddy", "postalCode": "" }
+  },
+  "products": {
+    "backpack": "Sauce Labs Backpack",
+    "bikeLight": "Sauce Labs Bike Light",
+    "boltTShirt": "Sauce Labs Bolt T-Shirt"
+  }
+}

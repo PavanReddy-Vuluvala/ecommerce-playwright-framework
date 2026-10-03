@@ -24,6 +24,7 @@ test.describe('Product Details Module', () => {
   // TC-10
   test('TC-10: should add the correct product to cart from details page', async ({ page }) => {
     await productsPage.openProductDetails(testData.products.bikeLight);
+    await expect(page.locator('.inventory_details_name')).toHaveText(testData.products.bikeLight);
     await page.locator('button', { hasText: 'Add to cart' }).click();
     await expect(page.locator('.shopping_cart_badge')).toHaveText('1');
   });

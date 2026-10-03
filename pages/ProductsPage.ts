@@ -23,7 +23,13 @@ export class ProductsPage {
     this.productNames = page.locator('.inventory_item_name');
   }
 
+  async waitForLoaded() {
+    await expect(this.page).toHaveURL(/inventory\.html/);
+    await this.inventoryItems.first().waitFor({ state: 'visible' });
+  }
+
   async getProductCount(): Promise<number> {
+    await this.waitForLoaded();
     return this.inventoryItems.count();
   }
 
@@ -38,7 +44,9 @@ export class ProductsPage {
   }
 
   async openProductDetails(name: string) {
+    await this.waitForLoaded();
     await this.page.locator('.inventory_item_name', { hasText: name }).click();
+    await expect(this.page).toHaveURL(/inventory-item\.html/);
   }
 
   async sortBy(option: 'az' | 'za' | 'lohi' | 'hilo') {
